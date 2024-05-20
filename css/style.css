@@ -1,0 +1,302 @@
+/* Reset css */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+/*** Start Global Varables ***/
+:root {
+    --color-primary: #81C408;
+    --color-orange: #ffb524;
+    --text-lightcolor:rgba(0, 0, 0, .55);
+    --bs-light: #F4F6F8;
+    --bs-white: #fff;
+}
+a {
+    text-decoration: none;
+    text-transform: capitalize;
+}
+/*** End Global Varables ***/
+/*** Start back to top style ***/
+.back-to-top {
+    right: 30px;
+    bottom: 30px;
+    background-color: var(--color-primary) !important;
+    border-color: var(--color-primary) !important;
+    z-index: 99;
+}
+/*** End back to top Style ***/
+/* social-icon Start */
+.social-icon {
+    right: 30px;
+    top: 30%;
+    flex-direction: column;
+    background-color: rgba(255, 181, 36, .5);
+}
+.social-icon a{
+    color: rgb(79, 119, 4);
+    opacity: .5;
+}
+.social-icon a:hover {
+    opacity: 1;
+}
+/* social-icon End */
+/*** Start Navbar Style ***/
+/* Start topbar */
+.topbar {
+    background-color: var(--color-primary);
+    border-radius: 50px 10px 50px 10px;
+    letter-spacing: 1px;
+}
+.topbar i {
+    color: var(--color-orange) !important;
+}
+.top-link small:hover {
+    color: var(--color-orange) !important;
+}
+/* End topbar */
+/* Start bottombar */
+nav :not(ul) {
+    color: var(--color-primary);
+}
+nav ul li .active {
+    color: var(--color-primary) !important;
+}
+nav ul li:hover .nav-link {
+    color: var(--color-primary) !important;
+}
+@media (min-width: 1200px) {
+    .navbar .nav-item .dropdown-menu {
+        display: block;
+        visibility: hidden;
+        top: 100%;
+        transform: rotateX(-75deg);
+        transform-origin: 0% 0%;
+        border: 0;
+        transition: .5s;
+        opacity: 0;
+    }
+}
+
+.dropdown .dropdown-menu a:hover {
+    background: var(--color-orange);
+    color: var(--color-primary);
+}
+
+.navbar .nav-item:hover .dropdown-menu {
+    transform: rotateX(0deg);
+    visibility: visible;
+    background: var(--bs-light) !important;
+    border-radius: 10px !important;
+    transition: .5s;
+    opacity: 1;
+}
+/* End bottombar */
+/*** End Navbar Style ***/
+/*** Start Hero Style ***/
+.hero-header {
+    background: linear-gradient(rgba(248, 223, 173, 0.1), rgba(248, 223, 173, 0.1)), url(../images/hero-img.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.carousel-item {
+    position: relative;
+}
+
+.carousel-item a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+    background: linear-gradient(rgba(255, 181, 36, 0.7), rgba(255, 181, 36, 0.7));
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+    width: 48px;
+    height: 48px;
+    border-radius: 48px;
+    border: 1px solid var(--bs-white);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel-control-next {
+    margin-right: 20px;
+}
+
+.carousel-control-prev {
+    margin-left: 20px;
+}
+
+@media (min-width: 992px) {
+    .hero-header {
+        margin-top: 152px !important;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero-header {
+        margin-top: 97px !important;
+    }
+}
+/*** End Hero Style ***/
+/*** featurs Start ***/
+.featurs .featurs-item .featurs-icon {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    background: var(--color-orange);
+}
+.featurs .featurs-item .featurs-icon i {
+    line-height: 120px;
+}
+
+.featurs .featurs-item .featurs-icon::after {
+    content: "";
+    width: 35px;
+    height: 35px;
+    background: var(--color-orange);
+    position: absolute;
+    bottom: -10px;
+    left: 37%;
+    transform: translate(-50%);
+    transform: rotate(45deg);
+}
+/*** featurs End ***/
+/*** Fruits Start ***/
+.fruite .tab-class .nav-item a.active {
+    background: var(--color-orange) !important;
+}
+
+.fruite .tab-class .nav-item a.active span {
+    color: var(--bs-white) !important; 
+}
+
+.fruite .fruite-categorie .fruite-name {
+    line-height: 40px;
+}
+
+.fruite .fruite-categorie .fruite-name a {
+    transition: 0.5s;
+}
+
+.fruite .fruite-categorie .fruite-name a:hover {
+    color: var(--color-orange);
+}
+
+.fruite .fruite-item {
+    height: 100%;
+    transition: 0.5s;
+}
+.fruite .fruite-item:hover {
+    box-shadow: 0 0 55px rgba(0, 0, 0, 0.4);
+}
+
+.fruite .fruite-item .fruite-img {
+    overflow: hidden;
+    transition: 0.5s;
+    border-radius: 10px 10px 0 0;
+}
+
+.fruite .fruite-item .fruite-img img {
+    transition: 0.5s;
+}
+
+.fruite .fruite-item .fruite-img img:hover {
+    transform: scale(1.3);
+}
+.fruite .fruite-item a:hover {
+    background-color: var(--color-orange);
+    color: var(--bs-white) !important;
+}
+.fruite .fruite-item a:hover i  {
+    color: var(--bs-white) !important;
+}
+/*** Fruits End ***/
+/* Collapse start */
+#collapse-data {
+    background-image: url(../images/hero-img.jpg);
+    background-attachment: fixed;
+}
+/* Collapse End */
+/* About Start */
+.service-content {
+    transform: translateY(-50%);
+}
+.service-item:hover {
+    transform: scale(1.03);
+    transition: 0.7s;
+}
+/* About End */
+/* more-info Start */
+.more-info {
+    background: #ffb524 url(../images/baner-1.png) no-repeat;
+    background-attachment: fixed;
+    background-position: 85% 100%;
+    background-size: 300px;
+}
+/* more-info End */
+/*  Our Farms Start  */
+.our-farm {
+    overflow: hidden;
+}
+.our-farm .info .date {
+    width: fit-content;
+}
+.our-farm .info .date::after {
+    content: " ";
+    width: 0;
+    height: 3px;
+    background-color: var(--color-orange);
+    display: block;
+    margin-top: 10px;
+    opacity: 0;
+    visibility: hidden;
+    transition: .7s;
+}
+.our-farm .info:hover .date::after {
+    width: 100%;
+    opacity: 1;
+    visibility: visible;
+}
+.our-farm .img {
+    transform: translatex(65px);
+    height: 100%;
+}
+.our-farm .img img {
+    transform: skew(20deg);
+    height: inherit;
+}
+@media (max-width: 768px) {
+    .our-farm .img {
+        transform: translatex(0) !important;
+    }
+}
+@media (max-width: 768px){
+    .our-farm .img img {
+        transform: skew(0) !important;
+    }
+}
+@media (max-width: 768px) { 
+    .our-farm .design {
+        flex-direction: column-reverse !important;
+    }
+}
+/*  Our Farms End  */
+/* Social Media Strat  */
+@media (max-width: 992px) { 
+    .join-us {
+        padding: 0 100px !important;
+    }
+}
+/* Social Media End  */
+
+
+
